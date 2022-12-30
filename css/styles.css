@@ -364,17 +364,73 @@ body {
 }
 
 .icon-class:hover {
+
 	background-color:#37b3ed;
-	border-radius: 0 0 10px 10px;
 }
+
+
 .port-image li:hover .icon-container{
 	opacity: 1;
 	cursor: pointer;
 	bottom:0;
 	
 }
+.zoom-image-container {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: var(--transition);
+}
 
+.show-container {
+	z-index: 99;
+	opacity: 1;
+}
 
+.image-content {
+	background:none;
+	width: 45vw;
+	height: 70%;
+	border-radius: 0.25rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.image-content img {
+	width: auto;
+	height:auto;
+	position: relative;
+}
+
+.prev-btn, .next-btn {
+	border:0;
+	background: transparent;
+	font-size: 4rem;
+	display: flex;
+	color:#fff;
+	z-index:99;
+	cursor:pointer;
+}
+
+.close-btn-span {
+	width:10%;
+
+	position:absolute;
+	top:10px;
+	right:0;
+}
+
+.close-btn {
+	border: 0;
+	background: transparent;
+	font-size: 2rem;
+	cursor: pointer;
+}
 .contact-section {	
 	
 	
@@ -501,7 +557,18 @@ body {
 	place-items: center;
 }
 .icon-container{
-width: 70vw;
+	width: 70vw;
+}
+.image-content img {
+	width:90vw;
+}
+.prev-btn, .next-btn {
+	color:#000;
+	
+}
+.close-btn {
+	display: flex;
+	justify-content: end;
 }
 .portfolio-projects ul li img {
 	width:70vw;

@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
 <meta name="description" content="Personal Portfolio">
 <!--Fonts-->
+
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
 				<ul class="side-nav">
 					<li ><a href="#"><span ><i class="fa fa-home"></i></span>Home</a></li>
 					<li><a href="#about"><span ><i class="fa fa-user"></i></span>About</a></li>
-					<li><a href="#"><span><i class="fa fa-file"></i></span>Resume</a></li>
+					<!--<li><a href="#"><span><i class="fa fa-file"></i></span>Resume</a></li>-->
 					<li><a href="#portfolio"><span><i class="fa fa-file"></i></span>Portfolio</a></li>
 					<li><a href="#contact"><span><i class="fa fa-address-book"></i></span>Contact</a></li>
 				</ul>
@@ -111,11 +112,10 @@
 						</nav>
 						<article class="portfolio-projects">
 							<ul class="port-image">
-								<li class="website" id="projects">
-																	
+								<li class="website" id="projects">								
 									<img src='images/portfolio/1.png' width='300' height='300'>
-									<div class="icon-container">
-										<button class="icon-class"><i class="fa fa-plus"></i></button>
+									<div class="icon-container" id="1">
+										<button class="icon-class" id="zoom-image"><i class="fa fa-plus"></i></button>
 										<a href='https://kousalya29.github.io/restaurant-website/' target="_blank" class="icon-class">
 											<i class="fa fa-link" aria-hidden="true"></i>
 										</a>
@@ -125,17 +125,17 @@
 								</li>
 								<li class="react" id="projects">
 									<img src='images/portfolio/2.png' width='300' height='300' >
-									<div class="icon-container">
-										<button class="icon-class"><i class="fa fa-search" aria-hidden="true"></i></button>
-								<a href='https://react-router-temp.netlify.app/' target="_blank" class="icon-class"><i class="fa fa-link" aria-hidden="true"></i></a>
+									<div class="icon-container" id="2">
+										<button class="icon-class" id="zoom-image"><i class="fa fa-plus" aria-hidden="true"></i></button>
+									<a href='https://react-router-temp.netlify.app/' target="_blank" class="icon-class"><i class="fa fa-link" aria-hidden="true"></i></a>
 								</a>
 								</div>
 								</li>
 
 								<li class="react" id="projects">
 									<img src='images/portfolio/3.png' width='300' height='300'>
-									<div class="icon-container">
-										<button class="icon-class"><i class="fa fa-plus"></i></button>
+									<div class="icon-container" id="3">
+										<button class="icon-class" id="zoom-image"><i class="fa fa-plus"></i></button>
 										<a href='https://react-stock-photos-api.netlify.app/' target="_blank" class="icon-class">
 											<i class="fa fa-link" aria-hidden="true"></i>
 										</a>
@@ -143,8 +143,8 @@
 								</li>
 								<li class="react" id="projects">
 										<img src='images/portfolio/4.png' width='300' height='300'>
-									<div class="icon-container">
-										<button class="icon-class"><i class="fa fa-plus"></i></button>
+									<div class="icon-container" id="4">
+										<button class="icon-class" id="zoom-image"><i class="fa fa-plus"></i></button>
 										<a href='https://github-user1-api.netlify.app/login' target="_blank" class="icon-class">
 											<i class="fa fa-link" aria-hidden="true"></i>
 										</a>
@@ -159,18 +159,26 @@
 										</a>
 									</div>
 								</li>-->
+								
 								<li class="react" id="projects">>
 										<img src='images/portfolio/6.png' width='300' height='300'>
-									<div class="icon-container">
-										<button class="icon-class"><i class="fa fa-plus"></i></button>
-										<a href='https://jobster-project1.netlify.app/' target="_blank" class="icon-class">
+									<div class="icon-container" id="6">
+										<button class="icon-class" id="zoom-image"><i class="fa fa-plus"></i></button>
+										<a href='https://jobster-project1.netlify.app/' target="_blank" class="icon-class link">
 											<i class="fa fa-link" aria-hidden="true"></i>
 										</a>
 									</div>
 								</li>
 							</ul>
 						</article>
-						
+						<div class="zoom-image-container">
+							<button class="prev-btn" onclick="prevImage();"><i class=" fa fa-angle-left"></i></button>
+							<article class="image-content">
+								<img src='' /><span class="close-btn-span"><button class="close-btn" onclick="closeImage();"><i class="fa fa-close"></i></button></span>
+							</article>
+							
+							<button class="next-btn" onclick="nextImage();"><i class="fa fa-angle-right"></i></button>
+						</div>
 					</div>
 				</section>
 				

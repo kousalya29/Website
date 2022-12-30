@@ -48,3 +48,50 @@ portfolio.addEventListener('click', function(e){
 
 })
 
+
+const btnContainer = document.querySelectorAll('#zoom-image');
+const contentDiv = document.querySelector('.zoom-image-container');
+const img = document.querySelector('.image-content img');
+
+
+btnContainer.forEach((btn,index)=>{
+	btn.addEventListener('click', (e)=>{
+		const picID = btn.parentElement.id
+		displayImage(picID);
+	})
+});
+
+function displayImage(picID) {
+	contentDiv.classList.add('show-container');
+	img.src=`images/portfolio/${picID}.png`;
+	contentDiv.id = picID;
+	
+}
+
+function closeImage() {
+	contentDiv.classList.remove('show-container');
+}
+
+function prevImage() {
+	let currentImg = contentDiv.id;
+	if(currentImg <= 1) {
+		currentImg = 6;
+		displayImage(currentImg);
+	} else 
+	currentImg-- ;
+	//console.log(currentImg)
+	displayImage(currentImg);
+
+}
+
+function nextImage() {
+	let currentImg = contentDiv.id;
+	if(currentImg >= 6) {
+		currentImg = 1;
+		displayImage(currentImg);
+	} else 
+	currentImg++ ;
+	//console.log(currentImg)
+	displayImage(currentImg);
+
+}
