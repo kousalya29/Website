@@ -222,6 +222,7 @@ body {
 	padding:20px;
 	text-align:center;
 	margin-left:22px;
+	width:auto;
 }
 
 .download_CV a {
@@ -257,14 +258,16 @@ body {
 	font-weight:800;
 }
 
+
 .about-short-content ul {
 	list-style: none;
-	height:auto;
 	margin-top:1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	
 }
 .about-short-content ul li {
-	width:50%;
+	width:auto;
 	float:left;
 }
 .about-short-content ul li span label {
@@ -480,8 +483,13 @@ body {
 	}
 }
 
-@media (min-width: 400px) and (max-width: 1199px) {
+@media (min-width: 300px) and (max-width: 1199px) {
+.about-short-content ul {
+		
+		display: grid;
+		grid-template-columns: 1fr;
 
+	}
 .content h3 {
 	font-size:30px;
 }
