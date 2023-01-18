@@ -483,13 +483,17 @@ body {
 	}
 }
 
-@media (min-width: 300px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
 .about-short-content ul {
-		
 		display: grid;
 		grid-template-columns: 1fr;
 
 	}
+	.download_CV {
+		padding: 0;
+		width:100%;
+	}
+
 .content h3 {
 	font-size:30px;
 }
