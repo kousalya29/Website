@@ -75,7 +75,7 @@ function closeImage() {
 function prevImage() {
 	let currentImg = contentDiv.id;
 	if(currentImg <= 1) {
-		currentImg = 6;
+		currentImg = 5;
 		displayImage(currentImg);
 	} else 
 	currentImg-- ;
@@ -86,12 +86,12 @@ function prevImage() {
 
 function nextImage() {
 	let currentImg = contentDiv.id;
-	if(currentImg >= 6) {
+	if(currentImg >= 5) {
 		currentImg = 1;
 		displayImage(currentImg);
 	} else 
 	currentImg++ ;
-	//console.log(currentImg)
+	
 	displayImage(currentImg);
 
 }
